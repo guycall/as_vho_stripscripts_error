@@ -1,4 +1,6 @@
 AsVhoStripscriptsError::Application.routes.draw do
+  resources :companies do as_routes end
+
   resources :teams do as_routes end
 
   # The priority is based upon order of creation:

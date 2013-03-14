@@ -9,3 +9,756 @@ ActionController::RoutingError (No route matches "/teams"):
 Rendered /var/lib/gems/1.9.1/gems/actionpack-3.0.20/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.9ms)
 DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /vagrant/as_vho_stripscripts_error/config/environment.rb:5)
 DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /vagrant/as_vho_stripscripts_error/config/environment.rb:5)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /vagrant/as_vho_stripscripts_error/config/environment.rb:5)
+  [1m[36mSQL (2.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (4.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (5.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (1.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.9ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+Migrating to CreateTeams (20130314220044)
+  [1m[36mSQL (2.6ms)[0m  [1mCREATE TABLE "teams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "position" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130314220044')
+  [1m[36mSQL (1.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (1.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (1.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("teams")[0m
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /vagrant/as_vho_stripscripts_error/config/environment.rb:5)
+
+
+Started GET "/teams" for 10.0.2.2 at 2013-03-14 22:02:12 +0000
+  Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (1.1ms)[0m  [1mSELECT "teams".* FROM "teams" WHERE (1=1) ORDER BY "teams"."id" ASC[0m
+Completed 500 Internal Server Error in 75ms
+
+NoMethodError (undefined method `page' for []:ActiveRecord::Relation):
+  
+
+Rendered /var/lib/gems/1.9.1/gems/actionpack-3.0.20/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+Rendered /var/lib/gems/1.9.1/gems/actionpack-3.0.20/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.6ms)
+Rendered /var/lib/gems/1.9.1/gems/actionpack-3.0.20/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.1ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /vagrant/as_vho_stripscripts_error/config/environment.rb:5)
+
+
+Started GET "/teams" for 10.0.2.2 at 2013-03-14 22:03:04 +0000
+  Processing by TeamsController#index as HTML
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (2.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_header.html.erb (24.0ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_column_headings.html.erb (6.2ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_messages.html.erb (0.9ms)
+  [1m[36mTeam Load (1.3ms)[0m  [1mSELECT "teams".* FROM "teams" WHERE (1=1) ORDER BY "teams"."id" ASC LIMIT 15 OFFSET 0[0m
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_messages.html.erb (15.7ms)
+  [1m[35mSQL (1.6ms)[0m  SELECT COUNT(*) FROM "teams" WHERE (1=1)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_pagination.html.erb (7.1ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list.html.erb (68.1ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_with_header.html.erb (266.6ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/list.html.erb within layouts/application (296.7ms)
+Completed 200 OK in 394ms (Views: 347.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/teams/new" for 10.0.2.2 at 2013-03-14 22:03:08 +0000
+  Processing by TeamsController#new as JS
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form_attribute.html.erb (1.9ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form_attribute.html.erb (2.3ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form.html.erb (37.0ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_base_form.html.erb (52.0ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_create_form.html.erb (69.6ms)
+Completed 200 OK in 98ms (Views: 96.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teams" for 10.0.2.2 at 2013-03-14 22:03:09 +0000
+  Processing by TeamsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M1Zdm8MGMuIX4deOfQ4Zid7fhSRfllRbBHEywOKgTvA=", "record"=>{"name"=>"1", "position"=>""}, "commit"=>"Create"}
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "teams" ("name", "position", "created_at", "updated_at") VALUES ('1', NULL, '2013-03-14 22:03:09.772832', '2013-03-14 22:03:09.772832')
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_messages.html.erb (0.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (4.7ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (4.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (12.0ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record.html.erb (70.4ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/on_create.js.rjs (100.4ms)
+Completed 200 OK in 292ms (Views: 221.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/teams/new" for 10.0.2.2 at 2013-03-14 22:03:10 +0000
+  Processing by TeamsController#new as JS
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form_attribute.html.erb (2.2ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form_attribute.html.erb (2.4ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form.html.erb (16.3ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_base_form.html.erb (23.4ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_create_form.html.erb (27.9ms)
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teams" for 10.0.2.2 at 2013-03-14 22:03:12 +0000
+  Processing by TeamsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M1Zdm8MGMuIX4deOfQ4Zid7fhSRfllRbBHEywOKgTvA=", "record"=>{"name"=>"2", "position"=>""}, "commit"=>"Create"}
+  [1m[36mAREL (3.7ms)[0m  [1mINSERT INTO "teams" ("name", "position", "created_at", "updated_at") VALUES ('2', NULL, '2013-03-14 22:03:12.335424', '2013-03-14 22:03:12.335424')[0m
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_messages.html.erb (0.6ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (2.5ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (4.5ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (9.3ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record.html.erb (18.6ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/on_create.js.rjs (25.7ms)
+Completed 200 OK in 83ms (Views: 53.4ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/teams/new" for 10.0.2.2 at 2013-03-14 22:03:13 +0000
+  Processing by TeamsController#new as JS
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form_attribute.html.erb (2.3ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form_attribute.html.erb (2.6ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form.html.erb (16.3ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_base_form.html.erb (23.0ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_create_form.html.erb (27.1ms)
+Completed 200 OK in 32ms (Views: 30.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teams" for 10.0.2.2 at 2013-03-14 22:03:14 +0000
+  Processing by TeamsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M1Zdm8MGMuIX4deOfQ4Zid7fhSRfllRbBHEywOKgTvA=", "record"=>{"name"=>"3", "position"=>""}, "commit"=>"Create"}
+  [1m[35mAREL (4.0ms)[0m  INSERT INTO "teams" ("name", "position", "created_at", "updated_at") VALUES ('3', NULL, '2013-03-14 22:03:14.683898', '2013-03-14 22:03:14.683898')
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_messages.html.erb (0.9ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (2.3ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (4.9ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (9.4ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record.html.erb (18.0ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/on_create.js.rjs (24.8ms)
+Completed 200 OK in 156ms (Views: 40.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/teams/new" for 10.0.2.2 at 2013-03-14 22:03:15 +0000
+  Processing by TeamsController#new as JS
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form_attribute.html.erb (2.7ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form_attribute.html.erb (2.7ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form.html.erb (17.0ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_base_form.html.erb (26.6ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_create_form.html.erb (31.0ms)
+Completed 200 OK in 36ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teams" for 10.0.2.2 at 2013-03-14 22:03:16 +0000
+  Processing by TeamsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M1Zdm8MGMuIX4deOfQ4Zid7fhSRfllRbBHEywOKgTvA=", "record"=>{"name"=>"4", "position"=>""}, "commit"=>"Create"}
+  [1m[36mAREL (4.8ms)[0m  [1mINSERT INTO "teams" ("name", "position", "created_at", "updated_at") VALUES ('4', NULL, '2013-03-14 22:03:16.932838', '2013-03-14 22:03:16.932838')[0m
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_messages.html.erb (0.7ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (2.9ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (36.2ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (41.1ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record.html.erb (50.2ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/on_create.js.rjs (58.1ms)
+Completed 200 OK in 120ms (Views: 77.3ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/teams/new" for 10.0.2.2 at 2013-03-14 22:03:17 +0000
+  Processing by TeamsController#new as JS
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form_attribute.html.erb (3.2ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form_attribute.html.erb (2.1ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form.html.erb (17.2ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_base_form.html.erb (25.3ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_create_form.html.erb (29.2ms)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teams" for 10.0.2.2 at 2013-03-14 22:03:18 +0000
+  Processing by TeamsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M1Zdm8MGMuIX4deOfQ4Zid7fhSRfllRbBHEywOKgTvA=", "record"=>{"name"=>"5", "position"=>""}, "commit"=>"Create"}
+  [1m[35mAREL (3.6ms)[0m  INSERT INTO "teams" ("name", "position", "created_at", "updated_at") VALUES ('5', NULL, '2013-03-14 22:03:18.932751', '2013-03-14 22:03:18.932751')
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_messages.html.erb (1.3ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (2.3ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (4.7ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (9.7ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record.html.erb (18.4ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/on_create.js.rjs (26.5ms)
+Completed 200 OK in 95ms (Views: 46.7ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/teams/new" for 10.0.2.2 at 2013-03-14 22:03:19 +0000
+  Processing by TeamsController#new as JS
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form_attribute.html.erb (2.2ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form_attribute.html.erb (2.5ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form.html.erb (15.6ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_base_form.html.erb (24.2ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_create_form.html.erb (29.1ms)
+Completed 200 OK in 34ms (Views: 32.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teams" for 10.0.2.2 at 2013-03-14 22:03:20 +0000
+  Processing by TeamsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M1Zdm8MGMuIX4deOfQ4Zid7fhSRfllRbBHEywOKgTvA=", "record"=>{"name"=>"6", "position"=>""}, "commit"=>"Create"}
+  [1m[36mAREL (3.5ms)[0m  [1mINSERT INTO "teams" ("name", "position", "created_at", "updated_at") VALUES ('6', NULL, '2013-03-14 22:03:20.796287', '2013-03-14 22:03:20.796287')[0m
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_messages.html.erb (0.9ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (1.9ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (4.5ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (9.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record.html.erb (18.0ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/on_create.js.rjs (25.9ms)
+Completed 200 OK in 92ms (Views: 44.0ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/teams/new" for 10.0.2.2 at 2013-03-14 22:03:21 +0000
+  Processing by TeamsController#new as JS
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form_attribute.html.erb (2.5ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form_attribute.html.erb (3.0ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form.html.erb (17.1ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_base_form.html.erb (23.0ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_create_form.html.erb (28.3ms)
+Completed 200 OK in 32ms (Views: 30.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teams" for 10.0.2.2 at 2013-03-14 22:03:22 +0000
+  Processing by TeamsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M1Zdm8MGMuIX4deOfQ4Zid7fhSRfllRbBHEywOKgTvA=", "record"=>{"name"=>"6", "position"=>""}, "commit"=>"Create"}
+  [1m[35mAREL (3.9ms)[0m  INSERT INTO "teams" ("name", "position", "created_at", "updated_at") VALUES ('6', NULL, '2013-03-14 22:03:22.773410', '2013-03-14 22:03:22.773410')
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_messages.html.erb (0.7ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (1.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (3.0ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (8.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record.html.erb (18.0ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/on_create.js.rjs (24.5ms)
+Completed 200 OK in 65ms (Views: 43.7ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/teams/new" for 10.0.2.2 at 2013-03-14 22:03:23 +0000
+  Processing by TeamsController#new as JS
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form_attribute.html.erb (3.2ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form_attribute.html.erb (44.2ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form.html.erb (61.3ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_base_form.html.erb (71.6ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_create_form.html.erb (76.5ms)
+Completed 200 OK in 81ms (Views: 79.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teams" for 10.0.2.2 at 2013-03-14 22:03:24 +0000
+  Processing by TeamsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M1Zdm8MGMuIX4deOfQ4Zid7fhSRfllRbBHEywOKgTvA=", "record"=>{"name"=>"7", "position"=>""}, "commit"=>"Create"}
+  [1m[36mAREL (4.9ms)[0m  [1mINSERT INTO "teams" ("name", "position", "created_at", "updated_at") VALUES ('7', NULL, '2013-03-14 22:03:24.678767', '2013-03-14 22:03:24.678767')[0m
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_messages.html.erb (0.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (3.5ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (4.5ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (9.5ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record.html.erb (19.4ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/on_create.js.rjs (25.0ms)
+Completed 200 OK in 89ms (Views: 45.7ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/teams/new" for 10.0.2.2 at 2013-03-14 22:03:25 +0000
+  Processing by TeamsController#new as JS
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form_attribute.html.erb (2.4ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form_attribute.html.erb (2.3ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form.html.erb (16.7ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_base_form.html.erb (26.2ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_create_form.html.erb (30.8ms)
+Completed 200 OK in 35ms (Views: 34.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teams" for 10.0.2.2 at 2013-03-14 22:03:26 +0000
+  Processing by TeamsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M1Zdm8MGMuIX4deOfQ4Zid7fhSRfllRbBHEywOKgTvA=", "record"=>{"name"=>"", "position"=>""}, "commit"=>"Create"}
+  [1m[35mAREL (4.5ms)[0m  INSERT INTO "teams" ("name", "position", "created_at", "updated_at") VALUES (NULL, NULL, '2013-03-14 22:03:26.274172', '2013-03-14 22:03:26.274172')
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_messages.html.erb (0.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (2.4ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (5.5ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (10.2ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record.html.erb (21.0ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/on_create.js.rjs (29.5ms)
+Completed 200 OK in 99ms (Views: 51.5ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/teams/new" for 10.0.2.2 at 2013-03-14 22:03:27 +0000
+  Processing by TeamsController#new as JS
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form_attribute.html.erb (2.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form_attribute.html.erb (2.1ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form.html.erb (15.0ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_base_form.html.erb (24.3ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_create_form.html.erb (27.0ms)
+Completed 200 OK in 32ms (Views: 30.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teams" for 10.0.2.2 at 2013-03-14 22:03:28 +0000
+  Processing by TeamsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M1Zdm8MGMuIX4deOfQ4Zid7fhSRfllRbBHEywOKgTvA=", "record"=>{"name"=>"8", "position"=>""}, "commit"=>"Create"}
+  [1m[36mAREL (4.6ms)[0m  [1mINSERT INTO "teams" ("name", "position", "created_at", "updated_at") VALUES ('8', NULL, '2013-03-14 22:03:28.350627', '2013-03-14 22:03:28.350627')[0m
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_messages.html.erb (0.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (1.7ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (4.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (10.0ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record.html.erb (19.2ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/on_create.js.rjs (27.0ms)
+Completed 200 OK in 63ms (Views: 44.0ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/teams/new" for 10.0.2.2 at 2013-03-14 22:03:29 +0000
+  Processing by TeamsController#new as JS
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form_attribute.html.erb (2.4ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form_attribute.html.erb (2.2ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form.html.erb (15.5ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_base_form.html.erb (23.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_create_form.html.erb (28.1ms)
+Completed 200 OK in 33ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teams" for 10.0.2.2 at 2013-03-14 22:03:30 +0000
+  Processing by TeamsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M1Zdm8MGMuIX4deOfQ4Zid7fhSRfllRbBHEywOKgTvA=", "record"=>{"name"=>"9", "position"=>""}, "commit"=>"Create"}
+  [1m[35mAREL (5.3ms)[0m  INSERT INTO "teams" ("name", "position", "created_at", "updated_at") VALUES ('9', NULL, '2013-03-14 22:03:30.360070', '2013-03-14 22:03:30.360070')
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_messages.html.erb (0.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (2.5ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (4.7ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (8.6ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record.html.erb (19.6ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/on_create.js.rjs (24.8ms)
+Completed 200 OK in 108ms (Views: 46.7ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/teams/new" for 10.0.2.2 at 2013-03-14 22:03:31 +0000
+  Processing by TeamsController#new as JS
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form_attribute.html.erb (3.0ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form_attribute.html.erb (2.9ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form.html.erb (16.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_base_form.html.erb (24.5ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_create_form.html.erb (28.9ms)
+Completed 200 OK in 34ms (Views: 32.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teams" for 10.0.2.2 at 2013-03-14 22:03:32 +0000
+  Processing by TeamsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M1Zdm8MGMuIX4deOfQ4Zid7fhSRfllRbBHEywOKgTvA=", "record"=>{"name"=>"00", "position"=>""}, "commit"=>"Create"}
+  [1m[36mAREL (3.1ms)[0m  [1mINSERT INTO "teams" ("name", "position", "created_at", "updated_at") VALUES ('00', NULL, '2013-03-14 22:03:32.792300', '2013-03-14 22:03:32.792300')[0m
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_messages.html.erb (0.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (2.2ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (36.2ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (41.6ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record.html.erb (50.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/on_create.js.rjs (58.3ms)
+Completed 200 OK in 121ms (Views: 78.5ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/teams/new" for 10.0.2.2 at 2013-03-14 22:03:33 +0000
+  Processing by TeamsController#new as JS
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form_attribute.html.erb (2.2ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form_attribute.html.erb (2.5ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form.html.erb (18.4ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_base_form.html.erb (26.3ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_create_form.html.erb (32.0ms)
+Completed 200 OK in 37ms (Views: 35.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teams" for 10.0.2.2 at 2013-03-14 22:03:35 +0000
+  Processing by TeamsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M1Zdm8MGMuIX4deOfQ4Zid7fhSRfllRbBHEywOKgTvA=", "record"=>{"name"=>"11", "position"=>""}, "commit"=>"Create"}
+  [1m[35mAREL (4.7ms)[0m  INSERT INTO "teams" ("name", "position", "created_at", "updated_at") VALUES ('11', NULL, '2013-03-14 22:03:35.151585', '2013-03-14 22:03:35.151585')
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_messages.html.erb (0.7ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (2.4ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (5.3ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (9.6ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record.html.erb (17.2ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/on_create.js.rjs (24.6ms)
+Completed 200 OK in 77ms (Views: 43.6ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/teams/new" for 10.0.2.2 at 2013-03-14 22:03:35 +0000
+  Processing by TeamsController#new as JS
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form_attribute.html.erb (2.1ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form_attribute.html.erb (2.2ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form.html.erb (15.5ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_base_form.html.erb (22.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_create_form.html.erb (27.5ms)
+Completed 200 OK in 33ms (Views: 30.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teams" for 10.0.2.2 at 2013-03-14 22:03:37 +0000
+  Processing by TeamsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M1Zdm8MGMuIX4deOfQ4Zid7fhSRfllRbBHEywOKgTvA=", "record"=>{"name"=>"12", "position"=>""}, "commit"=>"Create"}
+  [1m[36mAREL (3.7ms)[0m  [1mINSERT INTO "teams" ("name", "position", "created_at", "updated_at") VALUES ('12', NULL, '2013-03-14 22:03:37.405283', '2013-03-14 22:03:37.405283')[0m
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_messages.html.erb (0.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (2.1ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (4.3ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (10.9ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record.html.erb (20.0ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/on_create.js.rjs (27.3ms)
+Completed 200 OK in 74ms (Views: 46.1ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/teams/new" for 10.0.2.2 at 2013-03-14 22:03:38 +0000
+  Processing by TeamsController#new as JS
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form_attribute.html.erb (2.7ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form_attribute.html.erb (3.1ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form.html.erb (19.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_base_form.html.erb (30.3ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_create_form.html.erb (35.5ms)
+Completed 200 OK in 40ms (Views: 38.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teams" for 10.0.2.2 at 2013-03-14 22:03:39 +0000
+  Processing by TeamsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M1Zdm8MGMuIX4deOfQ4Zid7fhSRfllRbBHEywOKgTvA=", "record"=>{"name"=>"13", "position"=>""}, "commit"=>"Create"}
+  [1m[35mAREL (3.9ms)[0m  INSERT INTO "teams" ("name", "position", "created_at", "updated_at") VALUES ('13', NULL, '2013-03-14 22:03:39.410493', '2013-03-14 22:03:39.410493')
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_messages.html.erb (0.7ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (2.2ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (4.4ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (10.6ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record.html.erb (19.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/on_create.js.rjs (26.4ms)
+Completed 200 OK in 97ms (Views: 50.1ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/teams/new" for 10.0.2.2 at 2013-03-14 22:03:40 +0000
+  Processing by TeamsController#new as JS
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form_attribute.html.erb (3.0ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form_attribute.html.erb (38.4ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form.html.erb (54.6ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_base_form.html.erb (61.9ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_create_form.html.erb (66.4ms)
+Completed 200 OK in 71ms (Views: 69.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teams" for 10.0.2.2 at 2013-03-14 22:03:41 +0000
+  Processing by TeamsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M1Zdm8MGMuIX4deOfQ4Zid7fhSRfllRbBHEywOKgTvA=", "record"=>{"name"=>"14", "position"=>""}, "commit"=>"Create"}
+  [1m[36mAREL (4.5ms)[0m  [1mINSERT INTO "teams" ("name", "position", "created_at", "updated_at") VALUES ('14', NULL, '2013-03-14 22:03:41.552922', '2013-03-14 22:03:41.552922')[0m
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_messages.html.erb (0.7ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (2.0ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (5.0ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (9.0ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record.html.erb (17.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/on_create.js.rjs (24.8ms)
+Completed 200 OK in 57ms (Views: 41.1ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/teams/new" for 10.0.2.2 at 2013-03-14 22:03:42 +0000
+  Processing by TeamsController#new as JS
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form_attribute.html.erb (7.4ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form_attribute.html.erb (2.9ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form.html.erb (30.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_base_form.html.erb (45.5ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_create_form.html.erb (50.0ms)
+Completed 200 OK in 55ms (Views: 52.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teams" for 10.0.2.2 at 2013-03-14 22:03:44 +0000
+  Processing by TeamsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M1Zdm8MGMuIX4deOfQ4Zid7fhSRfllRbBHEywOKgTvA=", "record"=>{"name"=>"16", "position"=>""}, "commit"=>"Create"}
+  [1m[35mAREL (5.7ms)[0m  INSERT INTO "teams" ("name", "position", "created_at", "updated_at") VALUES ('16', NULL, '2013-03-14 22:03:44.201824', '2013-03-14 22:03:44.201824')
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_messages.html.erb (0.7ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (2.3ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (4.2ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (8.7ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record.html.erb (17.5ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/on_create.js.rjs (24.8ms)
+Completed 200 OK in 59ms (Views: 42.2ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/teams" for 10.0.2.2 at 2013-03-14 22:03:46 +0000
+  Processing by TeamsController#index as HTML
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (2.6ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_header.html.erb (7.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_column_headings.html.erb (4.4ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_messages.html.erb (0.9ms)
+  [1m[36mTeam Load (5.2ms)[0m  [1mSELECT "teams".* FROM "teams" WHERE (1=1) ORDER BY "teams"."id" ASC LIMIT 15 OFFSET 0[0m
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_messages.html.erb (12.2ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (2.7ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (38.0ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (42.6ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (1.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (5.1ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (10.3ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (1.6ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (4.9ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (9.9ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (1.6ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (4.6ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (9.7ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (1.7ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (4.6ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (9.5ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (1.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (2.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (9.2ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (2.2ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (6.5ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (13.0ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (1.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (5.9ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (12.5ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (1.6ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (5.2ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (10.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (1.9ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (1.6ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (10.0ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (1.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (4.1ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (9.1ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (1.5ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (4.6ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (9.7ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (1.5ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (5.6ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (12.1ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (1.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (41.0ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (45.6ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (2.3ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (3.7ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (9.3ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record.html.erb (340.2ms)
+  [1m[35mSQL (2.2ms)[0m  SELECT COUNT(*) FROM "teams" WHERE (1=1)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_pagination.html.erb (16.6ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list.html.erb (387.1ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_with_header.html.erb (400.6ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/list.html.erb within layouts/application (420.5ms)
+Completed 200 OK in 435ms (Views: 425.1ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/teams?page=2" for 10.0.2.2 at 2013-03-14 22:03:49 +0000
+  Processing by TeamsController#index as JS
+  Parameters: {"page"=>"2"}
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_column_headings.html.erb (5.1ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_messages.html.erb (0.7ms)
+  [1m[36mTeam Load (2.9ms)[0m  [1mSELECT "teams".* FROM "teams" WHERE (1=1) ORDER BY "teams"."id" ASC LIMIT 15 OFFSET 15[0m
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_messages.html.erb (8.2ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (2.3ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (6.3ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (11.2ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (0.1ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (3.4ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (11.0ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record.html.erb (66.8ms)
+  [1m[35mSQL (0.8ms)[0m  SELECT COUNT(*) FROM "teams" WHERE (1=1)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_pagination.html.erb (14.2ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list.html.erb (112.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/list.js.rjs (119.1ms)
+Completed 200 OK in 187ms (Views: 181.4ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/teams" for 10.0.2.2 at 2013-03-14 22:03:52 +0000
+  Processing by TeamsController#index as JS
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_column_headings.html.erb (4.9ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_messages.html.erb (0.7ms)
+  [1m[36mTeam Load (3.4ms)[0m  [1mSELECT "teams".* FROM "teams" WHERE (1=1) ORDER BY "teams"."id" ASC LIMIT 15 OFFSET 15[0m
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_messages.html.erb (7.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (3.7ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (4.6ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (9.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (1.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (4.0ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (8.5ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record.html.erb (33.7ms)
+  [1m[35mSQL (1.6ms)[0m  SELECT COUNT(*) FROM "teams" WHERE (1=1)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_pagination.html.erb (16.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list.html.erb (73.6ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/list.js.rjs (77.8ms)
+Completed 200 OK in 94ms (Views: 86.7ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/teams" for 10.0.2.2 at 2013-03-14 22:03:53 +0000
+  Processing by TeamsController#index as JS
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_column_headings.html.erb (2.5ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_messages.html.erb (0.9ms)
+  [1m[36mTeam Load (2.9ms)[0m  [1mSELECT "teams".* FROM "teams" WHERE (1=1) ORDER BY "teams"."id" ASC LIMIT 15 OFFSET 15[0m
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_messages.html.erb (9.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (2.7ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (4.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (11.0ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (1.3ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (4.7ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (10.9ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record.html.erb (39.0ms)
+  [1m[35mSQL (1.5ms)[0m  SELECT COUNT(*) FROM "teams" WHERE (1=1)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_pagination.html.erb (18.4ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list.html.erb (83.3ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/list.js.rjs (87.7ms)
+Completed 200 OK in 105ms (Views: 98.5ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/teams" for 10.0.2.2 at 2013-03-14 22:03:53 +0000
+  Processing by TeamsController#index as JS
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_column_headings.html.erb (4.6ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_messages.html.erb (0.8ms)
+  [1m[36mTeam Load (2.3ms)[0m  [1mSELECT "teams".* FROM "teams" WHERE (1=1) ORDER BY "teams"."id" ASC LIMIT 15 OFFSET 15[0m
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_messages.html.erb (8.7ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (1.5ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (4.4ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (9.3ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (0.2ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (3.1ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (9.1ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record.html.erb (32.6ms)
+  [1m[35mSQL (1.5ms)[0m  SELECT COUNT(*) FROM "teams" WHERE (1=1)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_pagination.html.erb (49.1ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list.html.erb (106.7ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/list.js.rjs (111.4ms)
+Completed 200 OK in 128ms (Views: 122.1ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/teams" for 10.0.2.2 at 2013-03-14 22:03:54 +0000
+  Processing by TeamsController#index as JS
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_column_headings.html.erb (4.9ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_messages.html.erb (1.0ms)
+  [1m[36mTeam Load (2.1ms)[0m  [1mSELECT "teams".* FROM "teams" WHERE (1=1) ORDER BY "teams"."id" ASC LIMIT 15 OFFSET 15[0m
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_messages.html.erb (8.4ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (2.4ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (4.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (9.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (1.4ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (6.6ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (11.1ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record.html.erb (35.9ms)
+  [1m[35mSQL (1.2ms)[0m  SELECT COUNT(*) FROM "teams" WHERE (1=1)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_pagination.html.erb (15.7ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list.html.erb (74.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/list.js.rjs (79.0ms)
+Completed 200 OK in 97ms (Views: 91.4ms | ActiveRecord: 3.3ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /vagrant/as_vho_stripscripts_error/config/environment.rb:5)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /vagrant/as_vho_stripscripts_error/config/environment.rb:5)
+  [1m[36mSQL (3.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateTeams (20130314220044)
+Migrating to CreateCompanies (20130314221201)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (3.4ms)[0m  [1mCREATE TABLE "companies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "position" integer, "notes" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130314221201')
+  [1m[36mSQL (0.9ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.9ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (1.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("companies")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("teams")
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /vagrant/as_vho_stripscripts_error/config/environment.rb:5)
+
+
+Started GET "/company" for 10.0.2.2 at 2013-03-14 22:12:23 +0000
+
+ActionController::RoutingError (No route matches "/company"):
+  
+
+Rendered /var/lib/gems/1.9.1/gems/actionpack-3.0.20/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.5ms)
+
+
+Started GET "/company" for 10.0.2.2 at 2013-03-14 22:12:26 +0000
+
+ActionController::RoutingError (No route matches "/company"):
+  
+
+Rendered /var/lib/gems/1.9.1/gems/actionpack-3.0.20/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.3ms)
+
+
+Started GET "/companines" for 10.0.2.2 at 2013-03-14 22:12:44 +0000
+
+ActionController::RoutingError (No route matches "/companines"):
+  
+
+Rendered /var/lib/gems/1.9.1/gems/actionpack-3.0.20/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/companies" for 10.0.2.2 at 2013-03-14 22:12:49 +0000
+  Processing by CompaniesController#index as HTML
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (2.6ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_header.html.erb (14.7ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_column_headings.html.erb (5.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_messages.html.erb (0.8ms)
+  [1m[36mCompany Load (1.5ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE (1=1) ORDER BY "companies"."id" ASC LIMIT 15 OFFSET 0[0m
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_messages.html.erb (14.9ms)
+  [1m[35mSQL (0.8ms)[0m  SELECT COUNT(*) FROM "companies" WHERE (1=1)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_pagination.html.erb (5.4ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list.html.erb (57.7ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_with_header.html.erb (115.6ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/list.html.erb within layouts/application (141.9ms)
+Completed 200 OK in 291ms (Views: 232.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/companies/new" for 10.0.2.2 at 2013-03-14 22:12:53 +0000
+  Processing by CompaniesController#new as JS
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form_attribute.html.erb (2.0ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form_attribute.html.erb (1.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form_attribute.html.erb (2.0ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form.html.erb (52.0ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_base_form.html.erb (68.0ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_create_form.html.erb (79.5ms)
+Completed 200 OK in 91ms (Views: 89.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/companies" for 10.0.2.2 at 2013-03-14 22:12:59 +0000
+  Processing by CompaniesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M1Zdm8MGMuIX4deOfQ4Zid7fhSRfllRbBHEywOKgTvA=", "record"=>{"name"=>"kjhrjghrejk", "notes"=>"ojflkjgel;ebnv;ejnbjoie", "position"=>""}, "commit"=>"Create"}
+  [1m[36mSQL (1.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (2.9ms)[0m  INSERT INTO "companies" ("name", "position", "notes", "created_at", "updated_at") VALUES ('kjhrjghrejk', NULL, 'ojflkjgel;ebnv;ejnbjoie', '2013-03-14 22:12:59.074050', '2013-03-14 22:12:59.074050')
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_messages.html.erb (0.6ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (2.6ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (4.0ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (12.0ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record.html.erb (37.6ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/on_create.js.rjs (55.3ms)
+Completed 200 OK in 215ms (Views: 89.3ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/companies/1/edit?utf8=%E2%9C%93" for 10.0.2.2 at 2013-03-14 22:13:01 +0000
+  Processing by CompaniesController#edit as JS
+  Parameters: {"utf8"=>"✓", "id"=>"1"}
+  [1m[36mCompany Load (1.3ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form_attribute.html.erb (2.2ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form_attribute.html.erb (1.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form_attribute.html.erb (2.3ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_form.html.erb (21.9ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_base_form.html.erb (28.4ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_update_form.html.erb (31.8ms)
+Completed 200 OK in 49ms (Views: 43.4ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/companies/1?utf8=%E2%9C%93" for 10.0.2.2 at 2013-03-14 22:13:06 +0000
+  Processing by CompaniesController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M1Zdm8MGMuIX4deOfQ4Zid7fhSRfllRbBHEywOKgTvA=", "record"=>{"name"=>"kjhrjghrejk.", "notes"=>"ojflkjgel;ebnv;ejnbjoie", "position"=>""}, "commit"=>"Update", "id"=>"1"}
+  [1m[35mCompany Load (1.4ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36mAREL (3.2ms)[0m  [1mUPDATE "companies" SET "name" = 'kjhrjghrejk.', "updated_at" = '2013-03-14 22:13:06.248865' WHERE "companies"."id" = 1[0m
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_messages.html.erb (0.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (2.5ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (4.6ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (10.4ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record.html.erb (19.5ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/on_update.js.rjs (26.8ms)
+Completed 200 OK in 68ms (Views: 50.8ms | ActiveRecord: 4.7ms)
+
+
+Started POST "/companies/1?utf8=%E2%9C%93" for 10.0.2.2 at 2013-03-14 22:13:15 +0000
+  Processing by CompaniesController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M1Zdm8MGMuIX4deOfQ4Zid7fhSRfllRbBHEywOKgTvA=", "record"=>{"name"=>"kjhrjghrejk", "notes"=>"ojflkjgel;ebnv;ejnbjoie", "position"=>""}, "commit"=>"Update", "id"=>"1"}
+  [1m[35mCompany Load (1.5ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36mAREL (2.7ms)[0m  [1mUPDATE "companies" SET "name" = 'kjhrjghrejk', "updated_at" = '2013-03-14 22:13:15.255628' WHERE "companies"."id" = 1[0m
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_messages.html.erb (0.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record_columns.html.erb (2.8ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_action_group.html.erb (4.5ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_actions.html.erb (9.2ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/_list_record.html.erb (21.2ms)
+Rendered /var/lib/gems/1.9.1/gems/active_scaffold_vho-3.0.30/frontends/default/views/on_update.js.rjs (27.2ms)
+Completed 200 OK in 130ms (Views: 47.9ms | ActiveRecord: 4.2ms)
