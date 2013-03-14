@@ -1,0 +1,9 @@
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /vagrant/as_vho_stripscripts_error/config/environment.rb:5)
+
+
+Started GET "/teams?page=1" for 10.0.2.2 at 2013-03-14 21:54:37 +0000
+
+ActionController::RoutingError (No route matches "/teams"):
+  
+
+Rendered /var/lib/gems/1.9.1/gems/actionpack-3.0.20/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.9ms)
