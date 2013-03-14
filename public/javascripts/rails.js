@@ -88,16 +88,16 @@
     if (event.stopped) return false;
 
     if (element.tagName.toLowerCase() === 'form') {
-      method = element.readAttribute('method') || 'post';
-      url    = element.readAttribute('action');
+      method = event.memo.method || element.readAttribute('method') || 'post';
+      url = event.memo.url || element.readAttribute('action');
       // serialize the form with respect to the submit button that was pressed
-      params = element.serialize({ submit: element.retrieve('rails:submit-button') });
+      params = event.memo.params || element.serialize({ submit: element.retrieve('rails:submit-button') });
       // clear the pressed submit button information
       element.store('rails:submit-button', null);
     } else {
-      method = element.readAttribute('data-method') || 'get';
-      url    = element.readAttribute('href');
-      params = {};
+      method = event.memo.method || element.readAttribute('data-method') || 'get';
+      url = event.memo.url || element.readAttribute('href');
+      params = event.memo.params || {};
     }
 
     new Ajax.Request(url, {
@@ -156,7 +156,7 @@
     return !message || confirm(message);
   }
 
-  document.on('click', 'a[data-confirm], a[data-remote], a[data-method]', function(event, link) {
+  document.on('click', 'a[data-confirm], a[data-remote], a[data-method], input[data-remote]', function(event, link) {
     if (!allowAction(link)) {
       event.stop();
       return false;
